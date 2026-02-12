@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja"> <!-- HTML文書の言語を日本語に設定 -->
+<head>
+  <meta charset="UTF-8"> <!-- 文字コードをUTF-8に設定（日本語など多言語対応） -->
+  <title>シューティングゲーム</title> <!-- ブラウザのタブに表示されるタイトル -->
+  <link rel="stylesheet" href="style.css"> <!-- 外部CSSファイルを読み込み、スタイルを適用 -->
+</head>
+<body>
+
+  <div id="timer">残り時間: 60s</div>
+  <div id="score">スコア: 0</div>
+  <div id="lives">ライフ: 3</div>
+
+<div id="gameArea">
+  <div id="player">
+    <img src="images/fighter.png" class="player-img">
+  </div>
+  
+  <!-- 敵はJSで生成するので最初は空でOK -->
+   
+  <div id="startScreen">
+		<button onclick="startGame()">スタート</button>
+  </div>
+    
+  <div id="gameOverScreen" style="display: none;">
+    GAME OVER
+  </div>
+</div>
+
+  <!-- ゲームのロジックや描画処理を記述したJavaScriptファイルを読み込み -->
+  <script src="game.js"></script>
+</body>
+</html>
